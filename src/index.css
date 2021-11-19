@@ -1,19 +1,47 @@
-.header-main {
+body {
+  background-color: white;
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+
+#app-container {
+  background-color: white;
+  padding: 0px;
+}
+
+#app-header-container {
+  background-color: gray;
+  margin-bottom: 0.5em;
+}
+
+
+.message-section {
+  border: 1px solid gray;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  margin: 0.5em;
+  padding: 0em;
+  clear: both;
+}
+
+.messages-container {
+  clear: both;
+}
+
+
+.header-bar {
   padding: 0.2em;
-  background-color: #999;
+  overflow: overlay;
+  background-color: lightgray;
 }
 
-.header-msg-section {
-  padding: 0.2em;
-  background-color: #ccc;
-  float: none;
+.header-text {
+  float: left;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
-#title-main {
-  display: inline;
-  text-align: left;
-}
-
-#menu-main {
+.header-menu {
   float: right;
 }
