@@ -1,6 +1,6 @@
 function MessageItem(props) {
     return (
-        <div>
+        <div className="message-item-container">
             <a>{props.msgName}</a>
         </div>
     )
