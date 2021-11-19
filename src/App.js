@@ -1,6 +1,8 @@
+// Our primary React component
+
 function App() {
   return (
-    <div>MNS</div>
+    <div>MNS Connections Mobile</div>
   );
 }
 
