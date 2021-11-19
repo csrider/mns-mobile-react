@@ -1,0 +1,19 @@
+.header-main {
+  padding: 0.2em;
+  background-color: #999;
+}
+
+.header-msg-section {
+  padding: 0.2em;
+  background-color: #ccc;
+  float: none;
+}
+
+#title-main {
+  display: inline;
+  text-align: left;
+}
+
+#menu-main {
+  float: right;
+}
