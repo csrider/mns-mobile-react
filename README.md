@@ -1,3 +1,16 @@
+MNS Mobile App Demo
+
+A demonstrator of the MNS Connections Mobile UI, built on React.
+
+To get started...
+- Clone this repo
+- Change dir
+- Run: npm install
+
+
+=======================================
+React Boilerplate Readme...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
