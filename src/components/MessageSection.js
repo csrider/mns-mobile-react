@@ -9,16 +9,20 @@ import MessageItem from "./MessageItem";
 import * as Values from "../Values.js";
 
 function MessageSection(props) {
-  
-    return (
+  const sectionData = props.sectionData;
+
+  return (
     <div className="message-section">
-      <HeaderBar text={props.text} menuType={Values.menuTypes.messageSection} />
+      <HeaderBar
+        text={sectionData.name}
+        menuType={Values.menuTypes.messageSection}
+      />
 
       <div className="messages-container">
         {Values.messages.map((message) => {
-            if (message.sectionKey === props.sectionKey) {
-                return <MessageItem name={message.name} icon={message.icon} />
-            }
+          if (message.sectionKey === sectionData.key) {
+            return <MessageItem msgData={message} />;
+          }
         })}
       </div>
     </div>

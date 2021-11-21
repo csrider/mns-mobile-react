@@ -9,8 +9,8 @@ function App() {
     <div id="app-container">
       <AppHeader />
 
-      {Values.sections.map((section, index) => {
-        return <MessageSection sectionKey={section.key} text={section.name} />
+      {Values.sections.map((section) => {
+        return <MessageSection sectionData={section} />
       })}
 
       
