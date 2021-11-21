@@ -14,14 +14,20 @@ function MessageSection(props) {
   return (
     <div className="message-section">
       <HeaderBar
+        sectionKey={sectionData.key}
         text={sectionData.name}
         menuType={Values.menuTypes.messageSection}
       />
 
-      <div className="messages-container">
+      <div
+        className="messages-container"
+        id={"messages-container-" + sectionData.key}
+      >
         {Values.messages.map((message) => {
           if (message.sectionKey === sectionData.key) {
-            return <MessageItem msgData={message} />;
+            return (
+              <MessageItem msgData={message} />
+            );
           }
         })}
       </div>

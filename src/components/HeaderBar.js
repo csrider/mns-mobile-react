@@ -9,10 +9,8 @@ import Modal from "./Modal.js";
 import Backdrop from "./Backdrop.js";
 
 function HeaderBar(props) {
-  // Control our modal, beginning with it invisible...
-  // useState returns two elements (curr state and fxn is setter to change it)
-  // The setter then re-executes this component
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [sectionIsCollapsed, setSectionIsCollapsed] = useState(false);
 
   function mainMenuHandler() {
     setModalIsOpen(true);
@@ -26,7 +24,19 @@ function HeaderBar(props) {
     setModalIsOpen(false);
   }
 
-  function collapseSectionHandler() {}
+  function collapseSectionHandler(e) {
+    const msgItemContainer = document.getElementById(
+      "messages-container-" + props.sectionKey
+    );
+
+    if (sectionIsCollapsed) {
+      msgItemContainer.style.display = "block";
+      setSectionIsCollapsed(false);
+    } else {
+      msgItemContainer.style.display = "none";
+      setSectionIsCollapsed(true);
+    }
+  }
 
   return (
     <div className="header-bar" id="app-title-container">
@@ -38,17 +48,26 @@ function HeaderBar(props) {
         </button>
       ) : null}
       {props.menuType === Values.menuTypes.messageSection ? (
-        <button class="btn header-menu" onClick={sectionMenuHandler}>
-          Options
-        </button>
-      ) : null}
-      {props.menuType === Values.menuTypes.messageSection ? (
-        <button class="btn header-menu" onClick={collapseSectionHandler}>
-          Collapse
-        </button>
+        <span>
+          <button class="btn header-menu" onClick={sectionMenuHandler}>
+            Options
+          </button>
+
+          {sectionIsCollapsed ? (
+            <button class="btn header-menu" onClick={collapseSectionHandler}>
+              Expand
+            </button>
+          ) : (
+            <button class="btn header-menu" onClick={collapseSectionHandler}>
+              Collapse
+            </button>
+          )}
+        </span>
       ) : null}
 
-      {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} /> : null}
+      {modalIsOpen ? (
+        <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />
+      ) : null}
       {modalIsOpen ? <Backdrop onCancel={closeModalHandler} /> : null}
     </div>
   );
