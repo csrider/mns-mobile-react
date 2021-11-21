@@ -17,9 +17,9 @@ export const sections = [
 ];
 
 export const messages = [
-  { key: 0, name: "Msg 1", sectionKey: 1, icon: "" },
-  { key: 1, name: "Msg 2", sectionKey: 0, icon: "" },
-  { key: 2, name: "Msg 3", sectionKey: 0, icon: "" },
-  { key: 3, name: "Msg 4", sectionKey: 1, icon: "" },
-  { key: 4, name: "Msg 5", sectionKey: 0, icon: "" },
+  { key: 0, name: "Msg 1", sectionKey: 1, icon: "", msg: "This is a test message #1." },
+  { key: 1, name: "Msg 2", sectionKey: 0, icon: "", msg: "This is a test message #2." },
+  { key: 2, name: "Msg 3", sectionKey: 0, icon: "", msg: "This is a test message #3." },
+  { key: 3, name: "Msg 4", sectionKey: 1, icon: "", msg: "This is a test message #4." },
+  { key: 4, name: "Msg 5", sectionKey: 0, icon: "", msg: "This is a test message #5." },
 ];
