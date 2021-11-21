@@ -4,8 +4,14 @@
 
 
 function MessageItem(props) {
+
+    function launchMessage() {
+        //console.log("launchMessage for "+props.name)
+        
+    }
+
     return (
-        <div className="message-item-container">
+        <div onClick={launchMessage} className="message-item-container">
             <img src={props} alt="" />
             <span>{props.name}</span>
         </div>
