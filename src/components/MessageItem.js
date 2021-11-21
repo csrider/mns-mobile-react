@@ -3,20 +3,20 @@
  */
 
 function MessageItem(props) {
-  const message = props.msgData;
+  const messageData = props.msgData;
 
   function launchMessage() {
-    console.log("launchMessage for " + message.name);
+    console.log("launchMessage for " + messageData.name);
   }
 
   return (
     <div
       onClick={launchMessage}
       className="message-item-container"
-      id={"message-item-id-" + message.key}
+      id={"message-item-id-" + messageData.key}
     >
-      <img src={message.icon} alt="" />
-      <span>{message.name}</span>
+      <img src={messageData.icon} alt="" />
+      <span>{messageData.name}</span>
     </div>
   );
 }
