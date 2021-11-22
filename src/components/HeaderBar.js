@@ -5,24 +5,9 @@
 
 import * as Values from "../Values.js";
 import { useState } from "react";
-import Modal from "./Modal.js";
-import Backdrop from "./Backdrop.js";
 
 function HeaderBar(props) {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [sectionIsCollapsed, setSectionIsCollapsed] = useState(false);
-
-  function mainMenuHandler() {
-    setModalIsOpen(true);
-  }
-
-  function sectionMenuHandler() {
-    setModalIsOpen(true);
-  }
-
-  function closeModalHandler() {
-    setModalIsOpen(false);
-  }
 
   function collapseSectionHandler(e) {
     const msgItemContainer = document.getElementById(
@@ -42,16 +27,15 @@ function HeaderBar(props) {
     <div className="header-bar" id="app-title-container">
       <h1 className="header-text">{props.text}</h1>
 
-      {props.menuType === Values.menuTypes.mainApp ? (
-        <button class="btn header-menu" onClick={mainMenuHandler}>
-          Main Menu
-        </button>
+      {props.menuType === Values.menuTypes.mainApp &&
+      Values.config.enableMainMenu ? (
+        <button class="btn header-menu">Main Menu</button>
       ) : null}
       {props.menuType === Values.menuTypes.messageSection ? (
         <span>
-          <button class="btn header-menu" onClick={sectionMenuHandler}>
-            Options
-          </button>
+          {Values.config.enableSectionMenu ? (
+            <button class="btn header-menu">Options</button>
+          ) : null}
 
           {sectionIsCollapsed ? (
             <button class="btn header-menu" onClick={collapseSectionHandler}>
@@ -64,11 +48,6 @@ function HeaderBar(props) {
           )}
         </span>
       ) : null}
-
-      {modalIsOpen ? (
-        <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />
-      ) : null}
-      {modalIsOpen ? <Backdrop onCancel={closeModalHandler} /> : null}
     </div>
   );
 }

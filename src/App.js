@@ -5,15 +5,14 @@ import * as Values from "./Values.js";
 
 // Our primary React component
 function App() {
+  
   return (
     <div id="app-container">
       <AppHeader />
 
       {Values.sections.map((section) => {
-        return <MessageSection sectionData={section} />
+        return <MessageSection sectionData={section} />;
       })}
-
-      
 
     </div>
   );

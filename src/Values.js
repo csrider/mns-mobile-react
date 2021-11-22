@@ -1,5 +1,10 @@
 export const appName = "MNS Connections Mobile"
 
+export const config = {
+    enableMainMenu: false,
+    enableSectionMenu: false,
+}
+
 export const menuTypes = {
   mainApp: "mainApp",
   messageSection: "messageSection",

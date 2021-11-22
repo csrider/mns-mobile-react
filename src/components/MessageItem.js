@@ -2,11 +2,12 @@
  * It has the name of the message, as well as possibly an icon, color, and other options.
  */
 
+
 function MessageItem(props) {
   const messageData = props.msgData;
 
-  function launchMessage() {
-    console.log("launchMessage for " + messageData.name);
+  const launchMessage = () => {
+      console.log("launch message: "+messageData.name);
   }
 
   return (
@@ -17,6 +18,7 @@ function MessageItem(props) {
     >
       <img src={messageData.icon} alt="" />
       <span>{messageData.name}</span>
+
     </div>
   );
 }
