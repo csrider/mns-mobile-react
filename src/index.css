@@ -48,8 +48,15 @@ body {
   border-bottom: 1px solid lightgray;
   cursor: pointer;
 }
+.message-item-container:hover {
+  background-color: #eee;
+}
 .message-item-container:last-child {
   border-bottom: none
+}
+
+.icon {
+  margin-right: 0.5em;
 }
 
 

@@ -2,6 +2,7 @@
  * It has the name of the message, as well as possibly an icon, color, and other options.
  */
 
+import IconFoundry from "./IconFoundry";
 
 function MessageItem(props) {
   const messageData = props.msgData;
@@ -16,7 +17,7 @@ function MessageItem(props) {
       className="message-item-container"
       id={"message-item-id-" + messageData.key}
     >
-      <img src={messageData.icon} alt="" />
+      <IconFoundry iconName={messageData.icon} />
       <span>{messageData.name}</span>
 
     </div>
