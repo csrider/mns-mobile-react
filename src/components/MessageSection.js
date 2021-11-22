@@ -25,10 +25,9 @@ function MessageSection(props) {
       >
         {Values.messages.map((message) => {
           if (message.sectionKey === sectionData.key) {
-            return (
-              <MessageItem msgData={message} />
-            );
+            return <MessageItem msgData={message} />;
           }
+          return null;
         })}
       </div>
     </div>
