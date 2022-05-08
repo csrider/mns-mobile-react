@@ -81,7 +81,9 @@ DROP TABLE IF EXISTS `mns_mobile`.`fav_category` ;
 
 CREATE TABLE IF NOT EXISTS `mns_mobile`.`fav_category` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
+  `name` VARCHAR(55) NULL,
+  `icon` VARCHAR(55) NULL,
+  `config_attributes` JSON NULL,
   `created_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -100,6 +102,7 @@ CREATE TABLE IF NOT EXISTS `mns_mobile`.`favorite` (
   `user_id` INT UNSIGNED NULL,
   `message_id` INT UNSIGNED NULL,
   `icon` VARCHAR(55) NULL,
+  `config_attributes` JSON NULL,
   `created_at` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -182,8 +185,8 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `mns_mobile`;
-INSERT INTO `mns_mobile`.`fav_category` (`id`, `name`, `created_at`, `updated_at`) VALUES (1, 'System', NOW(), NULL);
-INSERT INTO `mns_mobile`.`fav_category` (`id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Uncategorized', NOW(), NULL);
+INSERT INTO `mns_mobile`.`fav_category` (`id`, `name`, `icon`, `config_attributes`, `created_at`, `updated_at`) VALUES (1, 'System', NULL, NULL, NOW(), NULL);
+INSERT INTO `mns_mobile`.`fav_category` (`id`, `name`, `icon`, `config_attributes`, `created_at`, `updated_at`) VALUES (2, 'Uncategorized', NULL, NULL, NOW(), NULL);
 
 COMMIT;
 
@@ -193,7 +196,7 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `mns_mobile`;
-INSERT INTO `mns_mobile`.`favorite` (`id`, `fav_category_id`, `user_id`, `message_id`, `icon`, `created_at`, `updated_at`) VALUES (1, 1, 1, 1, NULL, NOW(), NULL);
+INSERT INTO `mns_mobile`.`favorite` (`id`, `fav_category_id`, `user_id`, `message_id`, `icon`, `config_attributes`, `created_at`, `updated_at`) VALUES (1, 1, 1, 1, NULL, NULL, NOW(), NULL);
 
 COMMIT;
 
