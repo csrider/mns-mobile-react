@@ -2,6 +2,8 @@
 
 A demonstrator of the MNS *Connections Mobile* UI, built on React. This is intended to demonstrate the next proposed version of the mobile UI/app (v3), using the latest modern frameworks.
 
+### NOTE: This is not the complete version (it's the very first boilerplate draft I began with in the early stages of the prototype), as I am still trying to sanitize and get the much more complete early version authorized for public release.
+
 ## Public Notice: 2022-05-08
 
 This project has been sanitized and adapted to work with a MySQL backend in order to demonstrate my work (also in the absence of a full MessageNet server software platform).
