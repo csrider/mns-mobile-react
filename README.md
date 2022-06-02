@@ -1,3 +1,9 @@
+# INCOMPLETE! - Ignore This Repo!
+
+Go away, unless you're a hiring manager!  ;)
+
+This is an early work-in-progress of my attempt to showcase my React work. If you came here as part of a hiring process, please refer instead to my "mns-mobile-refactor-react" repo (https://github.com/csrider/mns-mobile-refactor-react)... that is a more true-to-life representation of work I actually did (whereas this repo is more of the early beginnings of a fresh refactor).
+
 # MNS Connections-Mobile React Demonstrator
 
 A demonstrator of the MNS *Connections Mobile* UI, built on React. This is intended to demonstrate the next proposed version of the mobile UI/app (v3), using the latest modern frameworks.
